@@ -1,152 +1,110 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirapat Viveghutsagun</title>
+    <title>Web Application Portfolio</title>
     <style>
-        * {
+        body {
+            font-family: "Segoe UI", sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Sarabun', Arial, sans-serif;
-            height: 100vh;
-            overflow: hidden;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-                        url('https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=1920') center/cover;
-            position: relative;
+            background: #f6f3ef;
+            color: #37353E;
         }
 
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
-            z-index: 10;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
-            animation: fadeIn 1.5s ease-in;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
         }
 
         h1 {
-            color: #fff;
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #6d5cda;
         }
 
-        p {
-            color: #f0f0f0;
-            font-size: 1.3em;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        h2 {
+            margin-top: 25px;
+            color: #7a6ccc;
+            border-left: 5px solid #d2c8ff;
+            padding-left: 10px;
         }
 
-        /* นกบิน */
-        .bird {
-            position: absolute;
-            font-size: 30px;
-            animation: fly 15s linear infinite;
+        figure {
+            text-align: center;
         }
 
-        .bird:nth-child(1) { top: 15%; animation-delay: 0s; }
-        .bird:nth-child(2) { top: 25%; animation-delay: 5s; }
-        .bird:nth-child(3) { top: 35%; animation-delay: 10s; }
-
-        /* น้ำตก */
-        .waterfall {
-            position: absolute;
-            right: 10%;
-            top: 0;
-            width: 100px;
-            height: 100%;
-            background: linear-gradient(180deg, 
-                transparent 0%, 
-                rgba(173, 216, 230, 0.3) 20%, 
-                rgba(173, 216, 230, 0.5) 100%);
-            animation: flow 2s linear infinite;
+        figure img {
+            border-radius: 20px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
         }
 
-        /* แม่น้ำ */
-        .river {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 150px;
-            background: linear-gradient(180deg, 
-                rgba(100, 149, 237, 0.4) 0%, 
-                rgba(65, 105, 225, 0.6) 100%);
-            animation: wave 3s ease-in-out infinite;
+        ul li {
+            margin-bottom: 6px;
         }
 
-        /* สัตว์ป่า */
-        .animals {
-            position: absolute;
-            bottom: 160px;
-            left: 5%;
-            font-size: 40px;
-            animation: walk 20s linear infinite;
+        .contact-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .contact img {
+            width: 55px;
+            transition: 0.25s;
         }
 
-        @keyframes fly {
-            0% { left: -5%; }
-            100% { left: 105%; }
+        .contact img:hover {
+            transform: scale(1.12);
         }
 
-        @keyframes flow {
-            0% { opacity: 0.6; }
-            50% { opacity: 0.8; }
-            100% { opacity: 0.6; }
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes walk {
-            0% { left: -10%; }
-            100% { left: 110%; }
+        .highlight {
+            color: #8c5ace;
+            font-weight: bold;
         }
     </style>
 </head>
+
 <body>
-    <!-- นกบิน -->
-    <div class="bird">🦅</div>
-    <div class="bird">🕊️</div>
-    <div class="bird">🦜</div>
-
-    <!-- น้ำตก -->
-    <div class="waterfall"></div>
-
-    <!-- แม่น้ำ -->
-    <div class="river"></div>
-
-    <!-- สัตว์ป่า -->
-    <div class="animals">🦌</div>
-
-    <!-- เนื้อหาหลัก -->
     <div class="container">
-        <div class="card">
-            <h1>สวัสดีครับ</h1>
-            <p>ผม Sirapat Viveghutsagun</p>
-            <p style="margin-top: 20px;">ยินดีที่ได้รู้จักครับ 🙏</p>
+        <h1>Hello Professor Thammarat Thamma 👋</h1>
+
+        <p>
+            My name is <strong class="highlight">Sirapat Viveghutsagun</strong>.
+            I'm a Computer Science student from
+            <span style="color: #a45ed4; font-weight: bold;">University of Phayao</span>,
+            so you can also call me <strong>"Title"</strong>.
+        </p>
+
+        <figure>
+            <img src="Picture/Image (3).jpeg" width="300x">
+            <figcaption style="margin-top: 10px; color: #6c6a75;">This is my picture.</figcaption>
+        </figure>
+
+        <h2>More Details</h2>
+        <ul>
+            <li>Age: 19</li>
+            <li>Birthday: 27/04/2006</li>
+            <li>Blood Group: O</li>
+            <li>My hobbies: Writing websites, Sleeping, Playing Games</li>
+        </ul>
+
+        <h2>My Contact</h2>
+        <div class="contact-container">
+            <div class="contact">
+                <a target="_blank" href="https://github.com/SirapatViveghutsagun">
+                    <img src="Picture/github-logo.png">
+                </a>
+            </div>
+            <div class="contact">
+                <a target="_blank" href="https://www.instagram.com/kyrenix._/">
+                    <img src="Picture/Instagram_icon.png">
+                </a>
+            </div>
         </div>
     </div>
 </body>
